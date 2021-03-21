@@ -48,10 +48,33 @@ public class Testador {
 	}
 
 	public boolean testeD() {
-	    return false;
+		Carrinho carrinho = new Carrinho();
+		Caixa caixa = new Caixa();
+		carrinho.adicionaItem(this.Itaipava);
+		carrinho.adicionaItem(this.Itaipava);
+		carrinho.adicionaItem(this.Apia);
+		caixa.insereDesconto(this.Apia,20);
+		float total = caixa.totalNovo(carrinho);
+		if(total == 18) {
+			return true;
+		}
+		else {
+			return false;}
 	}
 
 	public boolean testeE() {
-	    return false;
+		Carrinho carrinho = new Carrinho();
+		Caixa caixa = new Caixa();
+		carrinho.adicionaItem(this.Itaipava);
+		carrinho.adicionaItem(this.Itaipava);
+		carrinho.adicionaItem(this.Apia);
+		caixa.insereDesconto(this.Itaipava,20);
+		float total = caixa.totalNovo(carrinho);
+		if(total == 18) {
+			return true;
+		}
+		else {
+			return false;}
+		
 	}
 }
